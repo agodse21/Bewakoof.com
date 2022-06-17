@@ -475,6 +475,8 @@ ul>li>a>img{
     border: 1px solid black;
     display: flex;
   }
+
+
   #mobile_no>div{
     width: 18%;
     height: 70%;
@@ -494,13 +496,21 @@ align-items: center;
     color: grey;
     padding: 6px;
   } 
+ 
   #mobile_no>input{
     width: 70%;
     font-size: 20px;
     font-weight: bold;
     border: none;
     padding-left: 30px;
+    outline: 0;
+    border-width: 0 0 1px;
   }
+  #mobile_no input:focus {
+    border:none;
+  }
+
+
   #show_wrong_p{
     text-align: center;
     margin-left: -280px;
