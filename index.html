@@ -52,14 +52,14 @@
             <div id="logo_and_page">
                 <div id="logo">
                     <img id="resp_menu" src="https://img.icons8.com/ios-filled/2x/menu--v4.gif" alt="">
-                    <a href="#"><img src=" https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
+                    <a href="index.html"><img src=" https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
                             alt="">
                            
                             <img id="resp_logo" src="https://images.bewakoof.com/web/ic-web-bwkf-logo-pride-.svg" alt="">
                         </a></div>
                         
                 <div class="sections dropdown anim-link" id="men">
-                    <a href="#">MEN</a>
+                    <a id="men" href="#">MEN</a>
                     <div class="dropdown-content">
                       <ul> <a href="#">Topwear</a>
                         <li><a href="#">Printed Shirts</a></li>
@@ -97,7 +97,7 @@
                 </div>
                
                 <div class="sections dropdown anim-link" id="women">
-                    <a href="#"> WOMEN</a>
+                    <a id="women" href="#"> WOMEN</a>
                     <div class="dropdown-content">
                         <ul> <a href="#">Topwear</a>
                           <li><a href="#">Printed Shirts</a></li>
@@ -134,7 +134,7 @@
                       </div>
                 </div>
                 <div class="sections dropdown anim-link" id="mobile">
-                    <a href="#"> MOBILE COVERS</a>
+                    <a id="MOBILE_COVERS" href="#"> MOBILE COVERS</a>
                     <div class="dropdown-content">
                         <ul> <a href="#">Oneplus</a>
                           <li><a href="#">Oneplus Nord</a></li>
@@ -187,7 +187,7 @@
                         src="https://www.clker.com/cliparts/z/1/T/u/9/2/search-icon-md.png" alt="search"></div>
 
                 <hr id="hr1" />
-                <div id="login"><a id="login_text" href="#">Login</a><a href="#"><img id="wishlist_icon"
+                <div id="login"><a id="login_text" href="login.html">Login</a><a href="wishlist.html"><img id="wishlist_icon"
                             src="https://cdn.onlinewebfonts.com/svg/img_126692.png" alt="wishlist">
                         </a>
                     <a href="#"><img id="bag_icon" src="https://cdn.onlinewebfonts.com/svg/img_60675.png" alt="bag"></a>
@@ -554,3 +554,32 @@
 </body>
 
 </html>
+<script>
+    
+    document.querySelector("#men").addEventListener("click",checklogin);
+document.querySelector("#women").addEventListener("click",checklogin);
+document.querySelector("#MOBILE_COVERS").addEventListener("click",checklogin);
+
+
+var loadVal = JSON.parse(localStorage.getItem('userdetails'))
+
+
+function checklogin(){
+
+    if(loadVal==null){
+        alert("Hey User!!Please Sign In First")
+        window.location.href="login.html";
+    }
+    
+}
+     let Namearr = JSON.parse(localStorage.getItem("username")) ;
+     Namearr.map(function(ele){
+        document.getElementById("login_text").innerText=ele.name;
+     })
+
+
+
+
+
+
+</script>
