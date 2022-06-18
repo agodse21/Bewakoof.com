@@ -59,35 +59,35 @@
                         </a></div>
                         
                 <div class="sections dropdown anim-link" id="men">
-                    <a id="men" href="#">MEN</a>
+                    <a id="men" href="menspage.html">MEN</a>
                     <div class="dropdown-content">
-                      <ul> <a href="#">Topwear</a>
-                        <li><a href="#">Printed Shirts</a></li>
-                        <li><a href="#">Over Sized Shirts</a></li>
+                      <ul> <a href="menspage.html">Topwear</a>
+                        <li><a href="menspage.html">Printed Shirts</a></li>
+                        <li><a href="menspage.html">Over Sized Shirts</a></li>
                         <li><a href="#">Shirts</a></li>
                         <li><a href="#">VestS</a></li>
                         <li><a href="#">TShirts</a></li>
                         <li><a href="#">Kurtas</a></li>
                     </ul> 
 
-                    <ul> <a href="#">Bottomwear</a>
-                        <li><a href="#">Poggers</a></li>
-                        <li><a href="#">Payjams</a></li>
+                    <ul> <a href="menspage.html">Bottomwear</a>
+                        <li><a href="menspage.html">Poggers</a></li>
+                        <li><a href="menspage.html">Payjams</a></li>
                         <li><a href="#">Shorts</a></li>
                         <li><a href="#">Jeans</a></li>
                         <li><a href="#">Denim</a></li>
                         <li><a href="#">Boxers</a></li>
                     </ul> 
-                    <ul> <a href="#">Sports&activewear</a>
-                        <li><a href="#">Active TShirts</a></li>
-                        <li><a href="#">Sports Shorts</a></li>
+                    <ul> <a href="menspage.html">Sports&activewear</a>
+                        <li><a href="menspage.html">Active TShirts</a></li>
+                        <li><a href="menspage.html">Sports Shorts</a></li>
                         <li><a href="#">Clogs</a></li>
                         <li><a href="#">Flip-flops</a></li>
                         <li><a href="#">Casual Shoes</a></li>
                 
                     </ul> <hr>
-                    <ul> <a href="#" id="spacial_ul">SPACIALS</a>
-                        <li><a href="#"><img src="https://images.bewakoof.com/nav_menu/OOFsale-CircleNavigation-168x168--revised-1654790782.png" alt="">OFF Sale</a></li>
+                    <ul> <a href="menspage.html" id="spacial_ul">SPACIALS</a>
+                        <li><a href="menspage.html"><img src="https://images.bewakoof.com/nav_menu/OOFsale-CircleNavigation-168x168--revised-1654790782.png" alt="">OFF Sale</a></li>
                         <li><a href="#"><img src="https://images.bewakoof.com/nav_menu/go-local-icon-1654622393.png" alt="">Go local collection</a></li>
                         <li><a href="#"><img src="https://images.bewakoof.com/nav_menu/arena-icon-1652290108.png" alt="">Arena collection</a></li>
                         <li><a href="#"><img src="https://images.bewakoof.com/nav_menu/coke-icon-1645251020.png" alt="">Coca Colla collection</a></li>
@@ -190,7 +190,7 @@
                 <div id="login"><a id="login_text" href="login.html">Login</a><a href="wishlist.html"><img id="wishlist_icon"
                             src="https://cdn.onlinewebfonts.com/svg/img_126692.png" alt="wishlist">
                         </a>
-                    <a href="#"><img id="bag_icon" src="https://cdn.onlinewebfonts.com/svg/img_60675.png" alt="bag"></a>
+                    <a href="cart.html"><img id="bag_icon" src="https://cdn.onlinewebfonts.com/svg/img_60675.png" alt="bag"></a>
                 </div>
             </div>
 
@@ -202,10 +202,10 @@
         <div id="divforimg1"><a href="#"><img id="home_page_img1"
                     src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-header-v1NEW.jpg" alt="slide"></a>
         </div>
-        <div id="div_for_main_img"><a href="#"><img id="for_men_img"
+        <div id="div_for_main_img"><a href="#" id="img_men"><img id="for_men_img"
                     src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-mendesktopNEW-1651231162.jpg"
                     alt="for men"></a>
-            <a href="#"><img id="for_women_img"
+            <a href="#" id="img_women"><img id="for_women_img"
                     src="https://images.bewakoof.com/web/Gender-Picker-Banner-desktop-Womendesktop-1651231163NEW.jpg"
                     alt="for women"></a>
         </div>
@@ -559,6 +559,9 @@
     document.querySelector("#men").addEventListener("click",checklogin);
 document.querySelector("#women").addEventListener("click",checklogin);
 document.querySelector("#MOBILE_COVERS").addEventListener("click",checklogin);
+document.querySelector("#img_men").addEventListener("click",checklogin);
+document.querySelector("#img_women").addEventListener("click",checklogin);
+
 
 
 var loadVal = JSON.parse(localStorage.getItem('userdetails'))

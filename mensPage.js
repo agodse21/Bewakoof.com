@@ -309,15 +309,7 @@ function myData(elem){
 
     }
 
-
-
-
-
-  
- 
-
-
- addtoCart.push(elem)
+//  addtoCart.push(elem)
  localStorage.setItem("cartlist", JSON.stringify(addtoCart));
  alert("Added to Cart")
  

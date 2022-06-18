@@ -761,6 +761,7 @@ span{
   display: flex;
  margin: auto;
 margin-top:  100px;
+padding-bottom: 20px;
 font-family: montserrat, sans-serif;
   
 }
@@ -807,7 +808,7 @@ font-family: montserrat, sans-serif;
 #cartitem>div>img{
   border-radius: 5px;
   width: 15%;
-  margin: 40px 0px 40px 250px;
+  margin: 40px 0px 40px 100px;
 }
 #cartitem>#div1{
   border: none;
@@ -855,6 +856,9 @@ font-family: montserrat, sans-serif;
  padding: 5px;
  
 }
+.card>p{
+  font-size: 13px;
+}
 .card>#mySelect2{
   width: 70px;
  border-radius: 4px;
@@ -869,6 +873,7 @@ font-family: montserrat, sans-serif;
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .card>#wishlist_btn{
   width: 150px;
@@ -877,6 +882,7 @@ font-family: montserrat, sans-serif;
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .card>#price::before{
   content:"\20B9";
