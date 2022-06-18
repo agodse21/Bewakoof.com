@@ -5,6 +5,33 @@
     document.getElementById("login_text").innerText=ele.name;
  })
 
+ 
+document.querySelector("#sort").addEventListener("change", sortingproduct);
+function sortingproduct() {
+    let selected = document.getElementById("sort").value;
+  
+    if (selected == "ascending") {
+       let res= womens.sort(function (a, b) {
+        if(a.price>b.price) return 1;
+        if(a.price<b.price) return -1;
+        return 0;
+        //  return a.price-b.price;   
+    })
+    displayPage(res);
+    }else if(selected=="descending"){
+       let x=womens.sort(function (a, b) {
+        if(a.price>b.price) return -1;
+        if(a.price<b.price) return 1;
+        return 0;
+     
+    })
+   
+    displayPage(x);
+    }
+}
+
+
+
  let womenData = [
 	{
 	
@@ -240,12 +267,14 @@
 		oldPrice:"789"
 	}
 ];
+let womens=womenData;
   let addtoCart=JSON.parse(localStorage.getItem("cartlist"))||[];
 let wishlistData= JSON.parse(localStorage.getItem("wishlistItem"))|| [];
 
 displayPage(addtoCart)
 
-function displayPage(addtoCart){
+function displayPage(womenData){
+	document.querySelector("#display").innerHTML="";
   womenData.forEach(function(elem){
     let div= document.createElement("div")
 
@@ -312,6 +341,7 @@ localStorage.setItem("cartlist", JSON.stringify(addtoCart));
 alert("Added to Cart")
 
 }
+
 function wishlist(elem){
   wishlistData.push(elem)
   localStorage.setItem("wishlistItem", JSON.stringify(wishlistData));
@@ -326,4 +356,4 @@ function high(){
     displayPage(addtoCart)
   }
 }
-
+displayPage(womenData);

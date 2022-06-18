@@ -11,22 +11,23 @@ function sortingproduct() {
   
     if (selected == "ascending") {
        let res= mens.sort(function (a, b) {
-        if(a.company>b.company) return 1;
-        if(a.company<b.company) return -1;
+        if(a.price>b.price) return 1;
+        if(a.price<b.price) return -1;
         return 0;
         //  return a.price-b.price;   
     })
-    displayitem(res);
+    displayPage(res);
     }else if(selected=="descending"){
        let x=mens.sort(function (a, b) {
-        if(a.company>b.company) return -1;
-        if(a.company<b.company) return 1;
+        if(a.price>b.price) return -1;
+        if(a.price<b.price) return 1;
         return 0;
        
     //    mens.sort(function (a, b) {
     //      return b.price-a.price;   
     })
-    displayitem(x);
+   
+    displayPage(x);
     }
 }
 
@@ -269,14 +270,19 @@ let mensData = [
     },
   
 ];
+let mens=mensData;
 
 let addtoCart=JSON.parse(localStorage.getItem("cartlist"))||[];
 let wishlistData= JSON.parse(localStorage.getItem("wishlistItem"))|| [];
 
-displayPage(addtoCart)
 
-function displayPage(addtoCart){
+
+
+
+function displayPage(mensData){
+  document.querySelector("#display").innerHTML="";
   mensData.forEach(function(elem){
+   
     let div= document.createElement("div")
 
     let pic=document.createElement("img")
@@ -345,6 +351,8 @@ function myData(elem){
  
  
 }
+displayPage(mensData);
+
 function wishlist(elem){
   wishlistData.push(elem)
   localStorage.setItem("wishlistItem", JSON.stringify(wishlistData));
