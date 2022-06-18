@@ -1,3 +1,7 @@
+let Namearr = JSON.parse(localStorage.getItem("username")) ;
+Namearr.map(function(ele){
+   document.getElementById("login_text").innerText=ele.name;
+})
 
 // coupon
 let total=0;

@@ -1,5 +1,6 @@
 // js for sign up page
 
+
 document.querySelector("#btn_signup").value="SIGN UP";
 document.querySelector("form").addEventListener("submit",signUp);
 let loadno = JSON.parse(localStorage.getItem("mobile_no"))

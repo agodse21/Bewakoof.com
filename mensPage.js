@@ -1,3 +1,8 @@
+let Namearr = JSON.parse(localStorage.getItem("username")) ;
+Namearr.map(function(ele){
+   document.getElementById("login_text").innerText=ele.name;
+})
+
 
 //   {
 //     image: "  https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/6696326/2018/9/27/6b18ac6a-ef42-46dd-9b8b-2c5fa47e84711538044457122-Roadster-Men-Blue-Regular-Fit-Faded-Casual-Shirt-96415380444-1.jpg",
@@ -234,9 +239,6 @@ let mensData = [
       price: 499,
       oldPrice: "₹999",
     },
-
-
-
   
 ];
 

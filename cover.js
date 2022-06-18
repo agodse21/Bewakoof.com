@@ -1,3 +1,10 @@
+
+
+ let Namearr = JSON.parse(localStorage.getItem("username")) ;
+ Namearr.map(function(ele){
+    document.getElementById("login_text").innerText=ele.name;
+ })
+
 // let mensData = [
 //     {
 //       image_url:
@@ -506,7 +513,7 @@ let mobileData = [
      oldPrice: 499,
    },
   ];
-let addtoCart=JSON.parse(localStorage.getItem("cartData"))||[];
+  let addtoCart=JSON.parse(localStorage.getItem("cartlist"))||[];
 let wishlistData= JSON.parse(localStorage.getItem("wishlistItem"))|| [];
 
 displayPage(addtoCart)
@@ -550,8 +557,33 @@ function displayPage(addtoCart){
 
 
 function myData(elem){
- addtoCart.push(elem)
- localStorage.setItem("cartData", JSON.stringify(addtoCart));
+  if (addtoCart.length == 0) {
+    let a = elem;
+    a.counter = 1;
+    addtoCart.push(a);
+}
+else {
+    let flag = false;
+    for (let i = 0; i < addtoCart.length; i++) {
+        if (addtoCart[i].image_url == elem.image_url) {
+          addtoCart[i].counter++;
+            flag = true;
+            break;
+
+        }
+
+    } if (flag == false) {
+        let a = elem;
+        a.counter = 1;
+        addtoCart.push(a);
+    }
+
+}
+
+//  addtoCart.push(elem)
+localStorage.setItem("cartlist", JSON.stringify(addtoCart));
+alert("Added to Cart")
+
 }
 function wishlist(elem){
   wishlistData.push(elem)
