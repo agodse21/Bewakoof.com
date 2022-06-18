@@ -345,6 +345,7 @@ alert("Added to Cart")
 function wishlist(elem){
   wishlistData.push(elem)
   localStorage.setItem("wishlistItem", JSON.stringify(wishlistData));
+  alert("Added To Wishlist")
 }
 
 function high(){
