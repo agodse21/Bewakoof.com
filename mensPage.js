@@ -1,10 +1,17 @@
+
+//   {
+//     image: "  https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/6696326/2018/9/27/6b18ac6a-ef42-46dd-9b8b-2c5fa47e84711538044457122-Roadster-Men-Blue-Regular-Fit-Faded-Casual-Shirt-96415380444-1.jpg",
+//     company: "ROADSTER", type: "Men Slim fit shirt", price: "999", id: 1
+// },
+
+
 let mensData = [
     {
       image_url:
         "https://images.bewakoof.com/t320/killmonger-half-sleeve-t-shirt-509349-1655101044-1.jpg",
       head: "Bewakoof",
       name: "Men's Black Killmonger Graphic Printed T-shirt",
-      price: "₹299",
+      price: 299,
       oldPrice: "₹999",
     },
     {
@@ -12,7 +19,7 @@ let mensData = [
           "https://images.bewakoof.com/t320/killmonger-oversized-fit-t-shirt-509357-1655101091-1.jpg",
         head: "Bewakoof",
         name: "Men's Olive Killmonger Graphic Printed Oversized T-shirt",
-        price: "₹499",
+        price: 499,
         oldPrice: "₹1299",
       },
       {
@@ -20,7 +27,7 @@ let mensData = [
           "https://images.bewakoof.com/t320/men-s-black-kalyug-age-of-machines-graphic-printed-t-shirt-509633-1655211307-1.jpg",
         head: "Bewakoof",
         name: "Men's Black Kalyug Age of Machines Graphic Printed T-shirt",
-        price: "₹299",
+        price: 299,
         oldPrice: "₹999",
       },
       {
@@ -265,6 +272,7 @@ function displayPage(addtoCart){
     btn.innerText="Add To Cart"
     btn.addEventListener("click", function(){
       myData(elem)
+
     })
 
     headDiv.append(Head,heart);
@@ -277,8 +285,43 @@ function displayPage(addtoCart){
 
 
 function myData(elem){
+
+    if (addtoCart.length == 0) {
+        let a = elem;
+        a.counter = 1;
+        addtoCart.push(a);
+    }
+    else {
+        let flag = false;
+        for (let i = 0; i < addtoCart.length; i++) {
+            if (addtoCart[i].image_url == elem.image_url) {
+              addtoCart[i].counter++;
+                flag = true;
+                break;
+
+            }
+
+        } if (flag == false) {
+            let a = elem;
+            a.counter = 1;
+            addtoCart.push(a);
+        }
+
+    }
+
+
+
+
+
+  
+ 
+
+
  addtoCart.push(elem)
  localStorage.setItem("cartlist", JSON.stringify(addtoCart));
+ alert("Added to Cart")
+ 
+ 
 }
 function wishlist(elem){
   wishlistData.push(elem)

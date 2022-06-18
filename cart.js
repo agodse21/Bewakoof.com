@@ -15,14 +15,13 @@ function applycoupon(){
     }
 }
 
-var loadcart = JSON.parse(localStorage.getItem('cartlist'))
+var loadcart = JSON.parse(localStorage.getItem("cartlist"))
 var loadwishlist=JSON.parse(localStorage.getItem('wishlist'))||[];
    
 let quat=0;
 
 let sum=0;
    loadcart.map(function(elem,index){
-
 
     quat=quat+elem.counter;
     
@@ -37,13 +36,13 @@ document.querySelector("#totalprice").innerText=total;
     div2.setAttribute("class","card");
 
 let img=document.createElement("img");
-img.setAttribute("src",elem.image);
+img.setAttribute("src",elem.image_url);
 
 let h2=document.createElement("h2");
-h2.innerText=elem.company;
+h2.innerText=elem.head;
 
 let p=document.createElement("p");
-p.innerText=elem.type;
+p.innerText=elem.name;
 let h3=document.createElement("h2");
 h3.setAttribute("id","price");
 h3.innerText=+elem.price;
