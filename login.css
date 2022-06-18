@@ -425,7 +425,7 @@ ul>li>a>img{
   }
  
   #bag_icon{
-    margin-left: -10px; 
+    /* margin-left: -10px;  */
     margin-top: 5px;
     width: 35%;
   }

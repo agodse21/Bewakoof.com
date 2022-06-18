@@ -405,7 +405,7 @@ ul>li>a>img{
     align-items: center;
 }
 #login_text{
-    margin-left: 10px;
+    /* margin-left: 10px; */
     font-size: 15px;
     letter-spacing: 1px;
 }
