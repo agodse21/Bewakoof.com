@@ -4,6 +4,34 @@ Namearr.map(function(ele){
 })
 
 
+
+document.querySelector("#sort").addEventListener("change", sortingproduct);
+function sortingproduct() {
+    let selected = document.getElementById("sort").value;
+  
+    if (selected == "ascending") {
+       let res= mens.sort(function (a, b) {
+        if(a.company>b.company) return 1;
+        if(a.company<b.company) return -1;
+        return 0;
+        //  return a.price-b.price;   
+    })
+    displayitem(res);
+    }else if(selected=="descending"){
+       let x=mens.sort(function (a, b) {
+        if(a.company>b.company) return -1;
+        if(a.company<b.company) return 1;
+        return 0;
+       
+    //    mens.sort(function (a, b) {
+    //      return b.price-a.price;   
+    })
+    displayitem(x);
+    }
+}
+
+
+
 //   {
 //     image: "  https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/6696326/2018/9/27/6b18ac6a-ef42-46dd-9b8b-2c5fa47e84711538044457122-Roadster-Men-Blue-Regular-Fit-Faded-Casual-Shirt-96415380444-1.jpg",
 //     company: "ROADSTER", type: "Men Slim fit shirt", price: "999", id: 1

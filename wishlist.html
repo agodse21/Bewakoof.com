@@ -9,6 +9,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png"
         hreflang="en-in">
     <link rel="stylesheet" href="wishlist.css">
+    <link rel="stylesheet" href="cart.css">
+
     <!-- <link rel="stylesheet" href="dropdown.css"> -->
 
 
@@ -197,11 +199,13 @@
 
     </div>
 
-    <div class="container">
-      <div><img src="https://images.bewakoof.com/web/group-3x-1509961969.png" alt="">
+ <div id="main">
+
+        <div id="cartitem">
+      <!-- <div><img src="https://images.bewakoof.com/web/group-3x-1509961969.png" alt="">
             <p> Your Wishlist is Empty !</p>
             <button id="shop_btn">Continue Shopping</button>
-        </div>
+        </div> -->
 
 
 
@@ -209,8 +213,8 @@
 
 
 
-
-    </div>
+</div>
+</div>
     <div id="footer">
         <div id="subdivfooter">
             <div id="footer_logo"><a href="#">
@@ -444,9 +448,62 @@ let Namearr = JSON.parse(localStorage.getItem("username")) ;
      Namearr.map(function(ele){
         document.getElementById("login_text").innerText=ele.name;
      })
-     
-    document.querySelector("#shop_btn").addEventListener("click",myfunction)
-function myfunction(){
-    window.location.href="index.html"
+
+let wishlistData= JSON.parse(localStorage.getItem("wishlistItem"))    
+wishlistData.map(function(elem,index){
+    console.log(elem)
+
+let div=document.createElement("div");
+let div2=document.createElement("div");
+div2.setAttribute("class","card");
+
+let img=document.createElement("img");
+img.setAttribute("src",elem.image_url);
+
+let h2=document.createElement("h2");
+h2.innerText=elem.head;
+
+let p=document.createElement("p");
+p.innerText=elem.name;
+let h3=document.createElement("h2");
+h3.setAttribute("id","price");
+h3.innerText=+elem.price;
+let h4=document.createElement("p");
+h4.innerText="You saved ₹650!"
+h4.style.color="teal";
+
+// opt.createElement("option");
+
+let p2=document.createElement("p");
+p2.innerText="Quantity:-"+" "+elem.counter;
+
+var array1 = ["SIZE","S","M","L"];
+let selectlist1=document.createElement("select");
+selectlist1.id = "mySelect";
+for (var i = 0; i < array1.length; i++) {
+var option = document.createElement("option");
+option.value = array1[i];
+option.text = array1[i];
+selectlist1.appendChild(option);
 }
+
+var array2 = ["QTY",1,2,3,4,5,6,7,8,9];
+let selectlist2=document.createElement("select");
+selectlist2.id = "mySelect2";
+for (var i = 0; i < array2.length; i++) {
+var option = document.createElement("option");
+option.value = array2[i];
+option.text = array2[i];
+selectlist2.appendChild(option);
+}
+
+div2.append(h2,p,h3,h4, p2,selectlist1,selectlist2);
+div.append(div2,img)
+document.querySelector("#cartitem").append(div);
+});
+
+
+
+
+
 </script>
