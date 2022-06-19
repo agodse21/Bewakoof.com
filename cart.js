@@ -20,7 +20,7 @@ function applycoupon(){
 }
 
 var loadcart = JSON.parse(localStorage.getItem("cartlist"))
-var loadwishlist=JSON.parse(localStorage.getItem('wishlist'))||[];
+var loadwishlist=JSON.parse(localStorage.getItem('wishlistItem'))||[];
    
 let quat=0;
 
@@ -119,11 +119,14 @@ window.location.reload();
 }
 function  movetowishlist(elem,index){
     loadwishlist.push(elem);
-    localStorage.setItem("wishlist",JSON.stringify(loadwishlist))
+    localStorage.setItem("wishlistItem",JSON.stringify(loadwishlist))
     localStorage.setItem("cartlist",JSON.stringify(loadcart))
     loadcart.splice(index,1)
     localStorage.setItem("cartlist",JSON.stringify(loadcart))
+    alert("Added To Wishlist")
     window.location.reload()
+
+  
    
     }
     

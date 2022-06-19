@@ -449,6 +449,7 @@ let Namearr = JSON.parse(localStorage.getItem("username")) ;
         document.getElementById("login_text").innerText=ele.name;
      })
 
+     let addtoCart=JSON.parse(localStorage.getItem("cartlist"))||[];
 let wishlistData= JSON.parse(localStorage.getItem("wishlistItem"))    
 wishlistData.map(function(elem,index){
     console.log(elem)
@@ -496,13 +497,49 @@ option.value = array2[i];
 option.text = array2[i];
 selectlist2.appendChild(option);
 }
+let btn= document.createElement("button")
+    btn.innerText="Add To Cart"
+    btn.addEventListener("click", function(){
+      myData(elem,index)
 
-div2.append(h2,p,h3,h4, p2,selectlist1,selectlist2);
+    })
+div2.append(h2,p,h3,h4, p2,selectlist1,selectlist2,btn);
 div.append(div2,img)
 document.querySelector("#cartitem").append(div);
 });
 
+function myData(elem,index){
 
+if (addtoCart.length == 0) {
+    let a = elem;
+    a.counter = 1;
+    addtoCart.push(a);
+}
+else {
+    let flag = false;
+    for (let i = 0; i < addtoCart.length; i++) {
+        if (addtoCart[i].image_url == elem.image_url) {
+          addtoCart[i].counter++;
+            flag = true;
+            break;
+
+        }
+
+    } if (flag == false) {
+        let a = elem;
+        a.counter = 1;
+        addtoCart.push(a);
+    }
+
+}
+
+//  addtoCart.push(elem)
+localStorage.setItem("cartlist", JSON.stringify(addtoCart));
+alert("Added to Cart")
+wishlistData.splice(index,1)
+localStorage.setItem("wishlistItem",JSON.stringify(wishlistData))
+window.location.reload();
+}
 
 
 
