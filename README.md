@@ -14,8 +14,8 @@
 >Dhiraj Garad
 
 ## About the Project
->This Project All about the clone Version Of [Bewakoof.com](https://www.bewakoof.com/)
->We are created a fully Functionble version by using **HTMl**, **CSS**, **JavaScript**. And Best Thing of our Project is **our clone site gives The Access to user When the user create Account by using Sign Up And do Log in**.
+>This Project is all about the clone Version Of [Bewakoof.com](https://www.bewakoof.com/)
+>We created a fully Functionble version by using **HTMl**, **CSS**, **JavaScript**. And Best Thing of our Project is **our clone site gives Access to user when the user create Account by using Sign Up and do Log in**.
 
 ## Here the link of our clone site:
 
@@ -24,4 +24,4 @@
 
 ### Thank you so much
 
->Thank you so much Masai For giving the opportunity of cunstruct Week Project's And also thanks to Our Instructor **chandra sir** And the our **IA Shilpa Ma'am**
+>Thank you so much Masai for giving the opportunity of construct week Project and also thanks to our Instructor **Chandra sir** and our **IA Shilpa Ma'am**
