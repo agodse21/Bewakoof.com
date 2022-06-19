@@ -21,3 +21,6 @@
 
  [Bewakoof.com clone by team alliance](https://curious-queijadas-04ca42.netlify.app/
 )
+
+
+###Thank you so much Masai For giving the opportunity of cunstruct Week Project's And also thanks to Our Instructor **chandra sir** And the our **IA Shilpa Ma'am**
