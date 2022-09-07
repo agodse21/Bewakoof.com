@@ -19,7 +19,7 @@
 
 ## Here the link of our clone site:
 
-> [Bewakoof.com clone by team alliance](https://tubular-druid-430d40.netlify.app/
+> [Bewakoof.com clone by team alliance](https://shiny-elf-f3e67f.netlify.app/
 )
 
 ### Thank you so much
