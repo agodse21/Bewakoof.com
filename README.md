@@ -25,8 +25,7 @@
 
 ## Here the link of our clone site:
 
-> [Bewakoof.com clone by team alliance](https://shiny-elf-f3e67f.netlify.app/
-)
+> [Bewakoof.com clone by team alliance](https://agodse21.github.io/Bewakoof.com/)
 
 ### Thank you so much
 
