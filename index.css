@@ -107,80 +107,60 @@ width: 15%;
 #resp_menu{
   display: none;
 }
-/* for responsive site */
-@media all and (min-width:320px) and (max-width:768px) {
-#topsection{
-    margin: 0;
-    display: none;
-  }
-  #navbar{
-    display: flex;
-    justify-content: left;
-    margin-top: 10px;
-    margin-left: -40px;
-  }
-  #navbar>#logo_and_page>#logo>#resp_menu{
-    display: inline;
-    width: 40%;
-  }
-  #navbar>#logo_and_page>#logo>a>#resp_logo{
-    display: inline;
-    margin-left: 15px;
 
-  }
-  #logo>a>img{
-    display: none;
-  }
-  #men{
-    display: none;
-  }
-  #women{
-    display: none;
-  }
-  #mobile{
-    display: none;
-  }
-  #search_icon{
-    display: none;
-  }
-  #search_login>#search{
-    background-color: transparent;
-    width: 60%;
-  }
-  #search_login>#search>#search_icon2{
-    display: inline;
-   margin-left: 100px;
-width: 15%;
+/* side menu in */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-#search_login>#search>input{
-  display: none;
+.sidenav h3{
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
-#hr1{
-  display: none;
-}
-#login_text{
-  display: none;
-}
-#login{
+#indFlag{
   display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
   align-items: center;
-  justify-content: center;
-  margin-right:-450px;
 }
-#search_login #wishlist_icon{
-  width: 60%;
-  margin-left: -10px;
-  
+#leftIcon{
+  margin-left: 25%;
 }
-#search_login #bag_icon{
-  width: 60%;
-  margin-left: -10px;
-  
+#indFlag img{
+  margin-right: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.sidenav a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
+.sidenav a:hover {
+  color: #f1f1f1;
 }
-/* responsive out */
 
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* side menu out */
 #search_icon2{
   display: none;
 }
@@ -758,3 +738,115 @@ align-items: center;
 span{
   color: #289fb7;
 }
+
+/* for responsive site */
+@media all and (min-width:320px) and (max-width:1080px) {
+  #customer_service_section{
+   
+    /* border: 1px solid red; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+  }
+  #return_section{
+  
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+   
+ }
+#topsection{
+    margin: 0;
+    display: none;
+  }
+  #navbar{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+    margin-left: -40px;
+  }
+  #navbar>#logo_and_page>#logo>#resp_menu{
+    display: inline;
+    width: 40%;
+  }
+  #navbar>#logo_and_page>#logo>a>#resp_logo{
+    display: inline;
+    margin-left: 15px;
+
+  }
+  #logo>a>img{
+    display: none;
+  }
+  #men{
+    display: none;
+  }
+  #women{
+    display: none;
+  }
+  #mobile{
+    display: none;
+  }
+  #search_icon{
+    display: none;
+  }
+  #search_login>#search{
+    background-color: transparent;
+    width: 60%;
+  }
+  #search_login>#search>#search_icon2{
+    display: inline;
+   margin-left: 70%;
+width: 15%;
+}
+#search_login>#search>input{
+  display: none;
+}
+#hr1{
+  display: none;
+}
+#login_text{
+  display: none;
+}
+#login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right:-150%;
+}
+#search_login #wishlist_icon{
+  width: 60%;
+  margin-left: -10px;
+  
+}
+#search_login #bag_icon{
+  width: 60%;
+  margin-left: -10px;
+  
+}
+#for_women_img{
+  width: 100%;
+  transform-origin: 30% 30%;
+  transition: transform 3s linear;
+}
+#for_men_img{
+  width: 100%;
+  transform-origin: 30% 30%;
+  transition: transform 3s linear;
+}
+#product_section{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  /* border: 1px solid red; */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: auto;
+  
+}
+
+}
+/* responsive out */

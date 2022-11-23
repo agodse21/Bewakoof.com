@@ -48,10 +48,27 @@
 
 
         <!-- navbar -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h3>Welcome Guest</h3>
+            <a href="login.html">Login/Signup</a>
+            <hr />
+            <div id="indFlag"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png" alt="flag">
+            <h2>India</h2>
+            <h2 id="leftIcon">></h2>
+            </div>
+            <a href="#">SHOP in</a>
+            <a href="menspage.html">Mens</a>
+            <a href="women.html">Womens</a>
+            <a href="#">Design of the day</a>
+            <a href="cover.html">MOBILE COVERS</a>
+          </div>
         <div id="navbar">
+            
+              
             <div id="logo_and_page">
                 <div id="logo">
-                    <img id="resp_menu" src="https://img.icons8.com/ios-filled/2x/menu--v4.gif" alt="">
+                    <img id="resp_menu" onclick="openNav()" src="https://img.icons8.com/ios-filled/2x/menu--v4.gif" alt="">
                     <a href="index.html"><img src=" https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg"
                             alt="">
                            
@@ -183,6 +200,7 @@
                         
                         <input
                         id="search_input" type="text" placeholder="Search by product,category or collection">
+                       
                         <img id="search_icon2"
                         src="https://www.clker.com/cliparts/z/1/T/u/9/2/search-icon-md.png" alt="search"></div>
 
@@ -217,7 +235,7 @@
     <div id="footer">
         <div id="subdivfooter">
             <div id="footer_logo"><a href="#">
-                    <h1>Bewakoof</h1>
+                     <h1>Bewakoof</h1>
                 </a>
                 <p>&#174;</p>
             </div>
@@ -579,6 +597,14 @@ function checklogin(){
      Namearr.map(function(ele){
         document.getElementById("login_text").innerText=ele.name;
      })
+
+     function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
 
 </script>
